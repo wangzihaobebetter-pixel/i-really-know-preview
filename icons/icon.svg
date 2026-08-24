@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="I Really Know living margin mark">
+  <rect width="512" height="512" fill="#F6F3EA"/>
+  <path d="M78 188 C160 244 322 238 430 156" fill="none" stroke="#20201D" stroke-width="48" stroke-linecap="round"/>
+  <path d="M96 310 C190 365 326 346 414 278" fill="none" stroke="#FF5A36" stroke-width="48" stroke-linecap="round"/>
+  <circle cx="416" cy="278" r="18" fill="#F5C84B"/>
+  <circle cx="430" cy="156" r="13" fill="#3B63F3"/>
+</svg>
