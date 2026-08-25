@@ -17,6 +17,13 @@
       /* Pre-paint theme + language so the first frame is already correct (§7.2). */
       (function () {
         try {
+          /* v7: ?ui=NN picks one of the ten grounded UI schemes and sticks.
+             Set before first paint so a scheme never flashes the default. */
+          var q = new URLSearchParams(location.search).get('ui');
+          if (q === 'off') { localStorage.removeItem('irk-scheme'); }
+          else if (q && /^\d{2}$/.test(q)) { localStorage.setItem('irk-scheme', q); }
+          var scheme = localStorage.getItem('irk-scheme');
+          if (scheme) { document.documentElement.setAttribute('data-ui', scheme); }
           var ui = JSON.parse(localStorage.getItem('irk-ui') || '{}');
           var theme = ui.theme || 'paper';
           var resolved = theme === 'slate' ? 'slate' : 'paper';
@@ -27,8 +34,8 @@
         } catch (e) {}
       })();
     </script>
-    <script type="module" crossorigin src="./assets/index-CguxFRop.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DxKuBT0u.css">
+    <script type="module" crossorigin src="./assets/index-DO8mYPQt.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CAVx5Yqb.css">
   </head>
   <body>
     <div id="root"></div>
